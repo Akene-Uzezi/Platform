@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('includes/head', {title: 'Users' , description: '' }) %>
+        <link rel="stylesheet" href="/styles/users.css">
+        <script src="/scripts/users.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1>All Users</h1>
+        <ul>
+            <% users.forEach(user=> { %>
+                <li>
+
+                    <img src="<%= user.imagePath %>" alt="userimage" id="userimage">
+                    <p>
+                        <%= user.username %>
+                            <a href="/users/<%= user._id %>/detail" class="btn">View User</a>.
+                    </p>
+                </li>
+
+                <% }) %>
+        </ul>
+    </main>
+</body>
+
+</html>

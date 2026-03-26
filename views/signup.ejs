@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('includes/head', {title: 'Platform - Sign up' , description: 'Platform | Sign up' } ) %>
+        <link rel="stylesheet" href="styles/signup.css">
+        <script src="/scripts/signup.js" defer></script>
+</head>
+
+<body>
+    <h1>Sign up</h1>
+    <% if (error) { %>
+        <p class="error">
+            <%= error %>
+        </p>
+        <% } %>
+            <form action="/signup" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="email" name="email" placeholder="email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" name="password2" placeholder="Verify password" required>
+                <label for="image">Profile Picture</label>
+                <input type="file" name="image" id="image" accept="image/*" required>
+                <img src="" alt="userimage" height="200px" width="200px" id="preview-image">
+                <button type="submit">Sign up</button>
+            </form>
+            <p>Already have an account? <a href="/login">Login</a></p>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('includes/head', {title: 'User detail' , description: '' }) %>
+        <link rel="stylesheet" href="/styles/users.css">
+        <link rel="shortcut icon" href="<%= user.imagePath %>" type="image/x-icon">
+</head>
+
+<body>
+    <main>
+        <ul>
+            <li>
+                <%- include('includes/user-item', {user}) %>
+            </li>
+        </ul>
+    </main>
+</body>
+
+</html>

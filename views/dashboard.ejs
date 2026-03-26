@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('includes/head', {title: 'dashboard' , description: 'Platform | dashboard' }) %>
+        <link rel="stylesheet" href="/styles/dashboard.css">
+        <link rel="shortcut icon" href="<%= user.imagePath %>" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <h1>
+            <img src="<%= user.imagePath %>" alt="userimage" id="userimage">
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="/users" class="btn">Find Users</a></li>
+                <li><a href="/logout" class="btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome <%= user.username %>
+        </h1>
+        <p>This is your personal dashboard</p>
+    </main>
+</body>
+
+</html>

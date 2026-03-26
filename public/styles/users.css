@@ -1,0 +1,43 @@
+#userimage {
+  object-fit: cover;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+}
+
+main {
+  text-align: center;
+  margin: 0 17rem;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  background-color: #ccc;
+  height: 100px;
+  width: 679px;
+  border-radius: 1rem;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 1rem;
+  padding-top: 0.625rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  background-color: azure;
+  color: black;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  border-radius: 2rem;
+  transition: background-color 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(233, 255, 255);
+}

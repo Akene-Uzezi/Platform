@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 25rem;
+  margin: 3.125rem auto;
+}
+
+.error {
+  color: red;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+input {
+  padding: 0.5rem;
+}
+
+button {
+  padding: 0.625rem;
+  background: #077bff;
+  color: white;
+  border: none;
+}
