@@ -29,7 +29,7 @@ app.use((error, req, res, next) => {
 const PORT = process.env.PORT || 3000;
 
 database.connectToDatabase().then(() => {
-  app.listen(PORT, () => {
+  app.listen(PORT, "0.0.0.0", () => {
     console.log("Connected to the database and started the server: ", PORT);
   });
 });
