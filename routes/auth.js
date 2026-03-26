@@ -2,6 +2,13 @@ const express = require("express");
 const router = express.Router();
 const authControllers = require("../controllers/auth-controllers");
 const multer = require("multer");
+const fs = require("fs");
+const path = require("path");
+const uploadDir = path.join(__dirname, "..", "images");
+if (!fs.existsSync(uploadDir)) {
+  fs.mkdirSync(uploadDir, { recursive: "true" });
+  console.log("Images directory created");
+}
 const storageConfig = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, "images");
