@@ -1,10 +1,11 @@
 const mongodbStore = require("connect-mongodb-session");
 const session = require("express-session");
 const uuid = require("uuid");
+require("dotenv").config();
 const createSessionStore = () => {
   const MongodbStore = mongodbStore(session);
   const store = new MongodbStore({
-    uri: "mongodb://localhost:27017",
+    uri: process.env.MONGODB_URI,
     databaseName: "platform",
     collection: "session",
   });
@@ -13,7 +14,7 @@ const createSessionStore = () => {
 
 const createSessionConfig = () => {
   return {
-    secret: 'super-secret',
+    secret: "super-secret",
     resave: false,
     saveUninitialized: false,
     store: createSessionStore(),
